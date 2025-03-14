@@ -4,226 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Savio - Portfólio Tecnológico</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-gray-800 to-gray-900 text-green-400 font-mono">
+    <div id="background-container"></div>
+    <main class="container mx-auto p-4">
+        <header class="text-center my-8">
+            <h1 class="text-4xl font-bold glitch" data-text="Savio - Portfólio">Savio - Portfólio</h1>
+            <p class="mt-2">Explorando o mundo da tecnologia.</p>
+        </header>
+
+        <section class="my-8">
+            <h2 class="text-2xl font-semibold mb-4 glitch" data-text="Tecnologias">Tecnologias</h2>
+            <div class="tech-grid">
+                <div class="tech-card card-hover">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress loading" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="tech-card card-hover">
+                    <h3>Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress loading" style="width: 70%;"></div>
+                    </div>
+                </div>
+                <div class="tech-card card-hover">
+                    <h3>HTML/CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress loading" style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-8">
+            <h2 class="text-2xl font-semibold mb-4 glitch" data-text="Projetos">Projetos</h2>
+            <div class="tech-grid">
+                <div class="tech-card card-hover">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição do projeto 1.</p>
+                </div>
+                <div class="tech-card card-hover">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição do projeto 2.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center p-4">
+        <p>&copy; 2024 Savio</p>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap');
-        
-        html, body {
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            font-family: 'Roboto', sans-serif;
-            color: #00ff41;
-            perspective: 1px;
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            padding: 2rem;
-        }
-
-        .tech-card {
-            background: rgba(45, 55, 72, 0.8);
-            border: 1px solid rgba(45, 212, 191, 0.5);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tech-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.3);
-        }
-
-        #background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .floating-icons {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            pointer-events: none;
-        }
-
-        .icon {
-            position: absolute;
-            font-size: 2rem;
-            color: rgba(255, 255, 255, 0.404);
-            animation: float 10s infinite linear;
-            opacity: 0.8;
-        }
-
-        .icon:hover {
-            transform: scale(1.5);
-            color: rgba(0, 255, 255, 0.5);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(50px, 50px) rotate(90deg); }
-            50% { transform: translate(-50px, 50px) rotate(180deg); }
-            75% { transform: translate(-50px, -50px) rotate(270deg); }
-        }
-
-        .glitch {
-            position: relative;
-            color: #00ff41;
-            animation: glitch-skew 1s infinite linear alternate-reverse;
-        }
-
-        .glitch::before,
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .glitch::before {
-            left: 2px;
-            text-shadow: -2px 0 red;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim 5s infinite linear alternate-reverse;
-        }
-
-        .glitch::after {
-            left: -2px;
-            text-shadow: -2px 0 blue;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim2 5s infinite linear alternate-reverse;
-        }
-
-        @keyframes glitch-anim {
-            0% { clip: rect(61px, 9999px, 52px, 0); }
-            5% { clip: rect(33px, 9999px, 33px, 0); }
-            10% { clip: rect(50px, 9999px, 34px, 0); }
-            15% { clip: rect(37px, 9999px, 44px, 0); }
-            20% { clip: rect(40px, 9999px, 20px, 0); }
-            25% { clip: rect(50px, 9999px, 70px, 0); }
-        }
-
-        @keyframes glitch-anim2 {
-            0% { clip: rect(29px, 9999px, 61px, 0); }
-            5% { clip: rect(42px, 9999px, 67px, 0); }
-            10% { clip: rect(57px, 9999px, 40px, 0); }
-            15% { clip: rect(66px, 9999px, 54px, 0); }
-            20% { clip: rect(70px, 9999px, 30px, 0); }
-            25% { clip: rect(35px, 9999px, 50px, 0); }
-        }
-
-        @keyframes glitch-skew {
-            0% { skew-x: -3deg; skew-y: -3deg; }
-            10% { skew-x: -3deg; skew-y: 3deg; }
-            20% { skew-x: 3deg; skew-y: -3deg; }
-            30% { skew-x: 3deg; skew-y: 3deg; }
-            40% { skew-x: -3deg; skew-y: -3deg; }
-        }
-
-        .skill-progress.loading {
-            background-image: linear-gradient(90deg, rgba(240, 240, 240, 0.2) 25%, rgba(255, 182, 193, 0.5) 50%, rgba(230, 230, 250, 0.2) 75%);
-            background-size: 200% 100%;
-            animation: loading 1.5s infinite linear;
-        }
-
-        @keyframes loading {
-            0% {
-                background-position: 200% 0;
-            }
-            100% {
-                background-position: -200% 0;
-            }
-        }
-
-        .skill-bar {
-            background-color: #2d2d2d;
-            border-radius: 10px;
-            height: 20px;
-            overflow: hidden;
-        }
-
-        .skill-progress {
-            height: 100%;
-            border-radius: 10px;
-        }
-
-        .skill-bar {
-            transition: all 0.5s ease;
-            cursor: pointer;
-        }
-
-        .skill-bar:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
-        }
-
-        .card-hover {
-            transition: all 0.5s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 30px rgba(0, 255, 255, 0.2);
-        }
-
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #16213e;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #00ff41;
-            border-radius: 5px;
-        }
-
-        nav a:hover {
-            transition: color 0.3s ease-in-out;
-            color: #ff9900;
-        }
-    </style>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Glitch Effect for Headings
-        function applyGlitchEffect() {
-            const headings = document.querySelectorAll('h1, h2');
-            headings.forEach(heading => {
-                heading.classList.add('glitch');
-                heading.setAttribute('data-text', heading.textContent);
-            });
-        }
-
-        // Cosmic Particle Background
-        function createParticleBackground() {
-            const container = document.getElementById('background-container') || (() => {
-                const newContainer = document.createElement('div');
-                newContainer.id = 'background-container';
-                document.body.insertBefore(newContainer, document.body.firstChild);
-                return newContainer;
-            })();
-
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    <script src="particle-background.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
