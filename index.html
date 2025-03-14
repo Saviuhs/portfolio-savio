@@ -3,45 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sávio Souza - Portfólio Tecnológico</title>
+    <title>Sávio Henrique de Souza- Portfólio Tecnológico</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        /* Importa as fontes Orbitron e Roboto Mono do Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap');
-        
+
+        /* Estilos gerais para a página */
         html, body {
-            overflow-x: hidden;
-            scroll-behavior: smooth;
+            overflow-x: hidden; /* Impede a barra de rolagem horizontal */
+            scroll-behavior: smooth; /* Habilita a rolagem suave */
         }
 
         body {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            font-family: 'Roboto', sans-serif;
-            color: #00ff41;
-            perspective: 1px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e); /* Fundo com gradiente */
+            font-family: 'Roboto', sans-serif; /* Define a fonte principal */
+            color: #14195f; /* Define a cor do texto principal */
+            perspective: 1px; /* Configura a perspectiva para efeitos 3D */
         }
+
+        /* Estilos para a grade de itens tecnológicos */
         .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            padding: 2rem;
+            display: grid; /* Usa o sistema de grid do CSS */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cria colunas responsivas */
+            gap: 1rem; /* Espaçamento entre as células do grid */
+            padding: 2rem; /* Espaçamento interno */
         }
+
+        /* Estilos para os cartões de tecnologia */
         .tech-card {
-            background: rgba(45, 55, 72, 0.8);
-            border: 1px solid rgba(45, 212, 191, 0.5);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            background: rgba(45, 55, 72, 0.8); /* Fundo com transparência */
+            border: 1px solid rgba(45, 212, 191, 0.5); /* Borda */
+            border-radius: 12px; /* Borda arredondada */
+            padding: 2rem; /* Espaçamento interno */
+            transition: all 0.3s ease; /* Transição suave para efeitos */
+            position: relative; /* Posicionamento relativo */
+            overflow: hidden; /* Esconde o conteúdo que ultrapassa */
         }
+
+        /* Estilo para o efeito hover nos cartões de tecnologia */
         .tech-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.3);
+            transform: translateY(-5px); /* Move o cartão para cima */
+            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.3); /* Sombra */
         }
-        /* 3D Parallax Background */
+
+        /* Estilos para o fundo de paralaxe 3D (não utilizado neste código) */
         #background-container {
             position: fixed;
             top: 0;
@@ -50,33 +59,36 @@
             height: 100%;
             z-index: -1;
         }
-        .floating-icons {
-    position: absolute; /* Faz o container ocupar toda a tela */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Ocupa toda a altura da tela */
-    overflow: hidden; /* Esconde os ícones que saem da tela */
-    pointer-events: none; /* Impede interação com os ícones */
-}
 
-.icon {
-    position: absolute;
-    font-size: 2rem; /* Tamanho do ícone */
-    color: rgba(255, 255, 255, 0.404); /* Cor do ícone (pode ajustar para o desejado) */
-    animation: float 10s infinite linear;
-    opacity: 0.8; /* Ajuste de opacidade, pode ser 0 para ficar totalmente invisível */
-}
-
-        /* Enhanced Floating Icons */
+        /* Estilos para os ícones flutuantes */
         .floating-icons {
-            position: fixed;
+            position: absolute; /* Posicionamento absoluto */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh; /* Altura total da tela */
+            overflow: hidden; /* Esconde o que ultrapassa */
+            pointer-events: none; /* Impede a interação com os ícones */
+        }
+
+        /* Estilos para cada ícone */
+        .icon {
+            position: absolute; /* Posicionamento absoluto */
+            font-size: 2rem; /* Tamanho da fonte (ícone) */
+            color: rgba(255, 255, 255, 0.404); /* Cor do ícone */
+            animation: float 10s infinite linear; /* Animação de flutuação */
+            opacity: 0.8; /* Opacidade */
+        }
+
+        /* Estilos aprimorados para os ícones flutuantes */
+        .floating-icons {
+            position: fixed; /* Posicionamento fixo */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: 1;
+            z-index: 1; /* Z-index para sobrepor outros elementos */
             overflow: hidden;
         }
 
@@ -86,32 +98,33 @@
             color: rgba(255, 255, 255, 0.2);
             animation: float 20s infinite linear;
             opacity: 0.5;
-            transition: all 0.5s ease;
+            transition: all 0.5s ease; /* Transição suave */
         }
 
         .icon:hover {
-            transform: scale(1.5);
-            color: rgba(0, 255, 255, 0.5);
+            transform: scale(1.5); /* Aumenta o tamanho no hover */
+            color: rgba(0, 255, 255, 0.5); /* Altera a cor no hover */
         }
 
+        /* Animação de flutuação */
         @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(50px, 50px) rotate(90deg); }
-            50% { transform: translate(-50px, 50px) rotate(180deg); }
-            75% { transform: translate(-50px, -50px) rotate(270deg); }
+            0%, 100% { transform: translate(0, 0) rotate(0deg); } /* Posição inicial */
+            25% { transform: translate(50px, 50px) rotate(90deg); } /* Move e rotaciona */
+            50% { transform: translate(-50px, 50px) rotate(180deg); } /* Move e rotaciona */
+            75% { transform: translate(-50px, -50px) rotate(270deg); } /* Move e rotaciona */
         }
 
-        /* Glitch Effect for Headings */
+        /* Efeito Glitch para títulos */
         .glitch {
-            position: relative;
-            color: #00ff41;
-            animation: glitch-skew 1s infinite linear alternate-reverse;
+            position: relative; /* Posicionamento relativo */
+            color: #fcfffd; /* Cor do texto */
+            animation: glitch-skew 1s infinite linear alternate-reverse; /* Animação */
         }
 
         .glitch::before,
         .glitch::after {
-            content: attr(data-text);
-            position: absolute;
+            content: attr(data-text); /* Conteúdo duplicado para o efeito */
+            position: absolute; /* Posicionamento absoluto */
             top: 0;
             left: 0;
             width: 100%;
@@ -120,18 +133,19 @@
 
         .glitch::before {
             left: 2px;
-            text-shadow: -2px 0 red;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim 5s infinite linear alternate-reverse;
+            text-shadow: -2px 0 red; /* Sombra vermelha */
+            clip: rect(44px, 450px, 56px, 0); /* Recorte */
+            animation: glitch-anim 5s infinite linear alternate-reverse; /* Animação */
         }
 
         .glitch::after {
             left: -2px;
-            text-shadow: -2px 0 blue;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim2 5s infinite linear alternate-reverse;
+            text-shadow: -2px 0 blue; /* Sombra azul */
+            clip: rect(44px, 450px, 56px, 0); /* Recorte */
+            animation: glitch-anim2 5s infinite linear alternate-reverse; /* Animação */
         }
 
+        /* Animações para o efeito Glitch */
         @keyframes glitch-anim {
             0% { clip: rect(61px, 9999px, 52px, 0); }
             5% { clip: rect(33px, 9999px, 33px, 0); }
@@ -139,7 +153,7 @@
             15% { clip: rect(37px, 9999px, 44px, 0); }
             20% { clip: rect(40px, 9999px, 20px, 0); }
             25% { clip: rect(50px, 9999px, 70px, 0); }
-            /* ... more random clips ... */
+            /* ... mais recortes ... */
         }
 
         @keyframes glitch-anim2 {
@@ -149,16 +163,136 @@
             15% { clip: rect(66px, 9999px, 54px, 0); }
             20% { clip: rect(70px, 9999px, 30px, 0); }
             25% { clip: rect(35px, 9999px, 50px, 0); }
-            /* ... more random clips ... */
+            /* ... mais recortes ... */
         }
 
         @keyframes glitch-skew {
-            0% { skew-x: -3deg; skew-y: -3deg; }
+            0% { skew-x: -3deg; skew-y: -3deg; } /* Torce o elemento */
             10% { skew-x: -3deg; skew-y: 3deg; }
             20% { skew-x: 3deg; skew-y: -3deg; }
             30% { skew-x: 3deg; skew-y: 3deg; }
             40% { skew-x: -3deg; skew-y: -3deg; }
         }
-    /* Adicionando a animação de loading */
-.skill-progress.loading {
-    background-image: linear-gradient(90deg, rgba(240, 240, 240, 0.2) 25
+
+        /* Adicionando a animação de loading */
+        .skill-progress.loading {
+            background-image: linear-gradient(90deg, rgba(240, 240, 240, 0.2) 25%, rgba(255, 182, 193, 0.5) 50%, rgba(230, 230, 250, 0.2) 75%); /* Gradiente */
+            background-size: 200% 100%; /* Tamanho do fundo */
+            animation: loading 1.5s infinite linear; /* Animação */
+        }
+
+        /* Definindo a animação */
+        @keyframes loading {
+            0% {
+                background-position: 200% 0; /* Posição inicial do fundo */
+            }
+            100% {
+                background-position: -200% 0; /* Posição final do fundo */
+            }
+        }
+
+        /* Adicionando o efeito de loading nas barras */
+        .skill-bar {
+            background-color: #2d2d2d; /* Cinza escuro */
+            border-radius: 10px; /* Borda arredondada */
+            height: 20px; /* Altura da barra */
+            overflow: hidden; /* Esconde o que ultrapassa */
+        }
+
+        /* A barra de progresso */
+        .skill-progress {
+            height: 100%; /* Altura total */
+            border-radius: 10px; /* Borda arredondada */
+        }
+
+        /* Barras de habilidades interativas */
+        .skill-bar {
+            transition: all 0.5s ease; /* Transição suave */
+            cursor: pointer; /* Cursor de ponteiro */
+        }
+
+        .skill-bar:hover {
+            transform: scale(1.05); /* Aumenta o tamanho no hover */
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.5); /* Sombra no hover */
+        }
+
+        /* Efeitos de hover */
+        .card-hover {
+            transition: all 0.5s ease; /* Transição suave */
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px); /* Move o cartão para cima */
+            box-shadow: 0 20px 30px rgba(0, 255, 255, 0.2); /* Sombra no hover */
+        }
+
+        /* Estilização da barra de rolagem */
+        ::-webkit-scrollbar {
+            width: 10px; /* Largura da barra de rolagem */
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #16213e; /* Cor do fundo da barra de rolagem */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #00ff41; /* Cor do "polegar" da barra de rolagem */
+            border-radius: 5px; /* Borda arredondada */
+        }
+
+        /* Efeito de hover nos links do nav */
+        nav a:hover {
+            transition: color 0.3s ease-in-out; /* Transição suave de cor */
+            color: #ff9900; /* Cor laranja suave */
+        }
+    </style>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Glitch Effect for Headings (Aplica o efeito glitch aos títulos)
+        function applyGlitchEffect() {
+            const headings = document.querySelectorAll('h1, h2'); // Seleciona os elementos h1 e h2
+            headings.forEach(heading => {
+                heading.classList.add('glitch'); // Adiciona a classe 'glitch'
+                heading.setAttribute('data-text', heading.textContent); // Define o atributo data-text com o texto do título
+            });
+        }
+
+        // Cosmic Particle Background (Cria o fundo de partículas cósmicas)
+        function createParticleBackground() {
+            const container = document.getElementById('background-container') ||
+                (() => {
+                    const newContainer = document.createElement('div'); // Cria um novo elemento div
+                    newContainer.id = 'background-container'; // Define o ID
+                    document.body.insertBefore(newContainer, document.body.firstChild); // Insere no início do body
+                    return newContainer; // Retorna o novo container
+                })();
+
+            const scene = new THREE.Scene(); // Cria uma nova cena Three.js
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000); // Cria uma câmera
+            const renderer = new THREE.WebGLRenderer({ alpha: true }); // Cria um renderizador WebGL com transparência
+
+            renderer.setSize(window.innerWidth, window.innerHeight); // Define o tamanho do renderizador
+            container.appendChild(renderer.domElement); // Adiciona o elemento do renderizador ao container
+
+            // Adjust renderer style (Ajusta o estilo do renderizador)
+            renderer.domElement.style.position = 'fixed'; // Posicionamento fixo
+            renderer.domElement.style.top = '0'; // Alinhado ao topo
+            renderer.domElement.style.left = '0'; // Alinhado à esquerda
+            renderer.domElement.style.zIndex = '-1'; // Z-index para ficar atrás de outros elementos
+            renderer.domElement.style.pointerEvents = 'none'; // Impede a interação com o renderizador
+
+            // Create particles (Cria as partículas)
+            const particlesGeometry = new THREE.BufferGeometry(); // Cria uma geometria de buffer
+            const particlesCount = 5000; // Número de partículas
+            const posArray = new Float32Array(particlesCount * 3); // Array para as posições das partículas
+
+            for (let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 100; // Espalha as partículas pela cena
+            }
+
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3)); // Define o atributo de posição
+
+            // Particle material (Material das partículas)
+            const particlesMaterial = new THREE.PointsMaterial({
