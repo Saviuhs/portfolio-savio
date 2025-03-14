@@ -18,10 +18,28 @@
             color: #f1f1f1;
         }
         header {
-            background: #1c3d5a;
+            background-image: urlhttps://media.licdn.com/dms/image/v2/D4D16AQGry6ZVjf0iRw/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1733877244787?e=1747267200&v=beta&t=cRUC5SgITtlT10nIVFWYRc1I3UM80Y9DIbgKpRMWmsg; /* Substitua pelo URL da sua imagem */
+            background-size: cover;
+            background-position: center;
             text-align: center;
-            padding: 60px 0;
+            padding: 100px 0; /* Aumentei o padding para melhor visualização */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative; /* Necessário para o efeito de sobreposição */
+            color: white; /* Garante que o texto seja visível sobre a imagem */
+        }
+        header::before { /* Efeito de sobreposição para melhorar a legibilidade do texto */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Ajuste a opacidade para controlar a escuridão */
+            z-index: 1;
+        }
+        header * {
+            position: relative;
+            z-index: 2; /* Garante que o texto fique acima da sobreposição */
         }
         header h1 {
             font-size: 3em;
@@ -101,7 +119,6 @@
             color: #fff;
             text-decoration: none;
         }
-        /* Animação para a imagem de perfil */
         .profile-pic {
             width: 150px;
             height: 150px;
@@ -125,44 +142,10 @@
     </header>
 
     <div class="container">
+        </div>
 
-        <!-- Sobre Mim -->
-        <section>
-            <h2>Sobre Mim</h2>
-            <div style="text-align: center;">
-                <img src="https://media.licdn.com/dms/image/v2/D4E03AQH3viKJUUEiDw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710356544093?e=1747267200&v=beta&t=IjvpiI21RMuU6m_ZBtNHT-ajnAH3ktbNV6CMvkzUpiA" alt="Foto de Sávio" class="profile-pic">
-            </div>
-            <p>Estudante de Gestão Empresarial com experiência em rotinas administrativas, financeiras e atendimento ao cliente em ambientes corporativos e comerciais. Hábil em transformar dados em visualizações estratégicas para apoiar a tomada de decisões, com fortes habilidades de comunicação interpessoal, analíticas, negociação e apresentação em equipe.</p>
-        </section>
+    <footer class="footer">
+        </footer>
 
-        <!-- Habilidades -->
-        <section class="skills">
-    <h2>Habilidades</h2>
-    <ul>
-        <li><strong>SQL (Structured Query Language):</strong> Manipulação e análise de dados em bancos de dados relacionais, utilizando SQL para consultas, inserções, atualizações e exclusões de dados.</li>
-        <li><strong>Power BI:</strong> Criação de dashboards e relatórios interativos para análise de dados, além de técnicas de modelagem e transformação de dados.</li>
-        <li><strong>Python:</strong> Introdução à programação com Python, com foco em automação, análise de dados e integração com ferramentas de visualização e bancos de dados.</li>
-        <li><strong>Google Cloud:</strong> Computação em nuvem, armazenamento de dados e análise de grandes volumes de dados utilizando as ferramentas do Google Cloud.</li>
-        <li><strong>Microsoft Azure:</strong> Capacitação em IA e Machine Learning com foco na configuração do Azure Machine Learning, otimização de modelos e implementação de soluções analíticas baseadas em IA.</li>
-        <li><strong>Looker:</strong> Conhecimento em criação de dashboards e relatórios, além de modelagem de dados, com foco em visualizações interativas e integração com diversas fontes de dados.</li>
-        <li><strong>Excel:</strong> Domínio em análise e visualização de dados, com foco em tabelas dinâmicas, funções avançadas e criação de dashboards. Experiência na utilização do Excel para análise exploratória de dados e modelagem de dados, complementando outras ferramentas de análise.</li>
-    </ul>
-</section>
-
-        <!-- Projetos -->
-        <section class="projects">
-            <h2>Projetos</h2>
-            <ul>
-                <li><strong>Dashboard Power BI</strong> – Análise Financeira</li>
-                <li><strong>Projeto SQL</strong> – Banco de Dados de Clientes</li>
-                <li><strong>Automação de Relatórios</strong> – Python e Excel</li>
-            </ul>
-        </section>
-
-        <!-- Contato -->
-        <section class="contact">
-            <h2>Contato</h2>
-            <p>Entre em contato comigo através dos links abaixo:</p>
-            <p><a href="https://github.com/saviuhs" target="_blank">GitHub</a></p>
-            <p><a href="https://www.linkedin.com/in/saviuhs/" target="_bla
-
+</body>
+</html>
