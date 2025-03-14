@@ -1,334 +1,221 @@
-
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Portfólio de Sávio | Analista de Dados em Formação</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
-
-    <style>
-
-        * {
-
-            margin: 0;
-
-            padding: 0;
-
-            box-sizing: border-box;
-
-        }
-
-        body {
-
-            font-family: 'Roboto', sans-serif;
-
-            background: #0e0f11;
-
-            color: #f1f1f1;
-
-        }
-
-        header {
-
-            background: #1c3d5a;
-
-            text-align: center;
-
-            padding: 60px 0;
-
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-
-        }
-
-        header h1 {
-
-            font-size: 3em;
-
-            font-weight: 600;
-
-            margin-bottom: 10px;
-
-        }
-
-        header p {
-
-            font-size: 1.2em;
-
-            color: #ccc;
-
-        }
-
-        .container {
-
-            width: 80%;
-
-            margin: 0 auto;
-
-            padding: 20px 0;
-
-        }
-
-        section {
-
-            background: #1c3d5a;
-
-            margin-bottom: 30px;
-
-            padding: 40px;
-
-            border-radius: 8px;
-
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-        }
-
-        h2 {
-
-            font-size: 2.5em;
-
-            margin-bottom: 15px;
-
-            color: #f1f1f1;
-
-        }
-
-        p {
-
-            font-size: 1.1em;
-
-            line-height: 1.6;
-
-            color: #bbb;
-
-        }
-
-        .skills ul {
-
-            list-style-type: none;
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 15px;
-
-        }
-
-        .skills ul li {
-
-            background: #2a4f71;
-
-            padding: 10px 20px;
-
-            border-radius: 20px;
-
-            transition: background 0.3s;
-
-        }
-
-        .skills ul li:hover {
-
-            background: #f1f1f1;
-
-            color: #1c3d5a;
-
-        }
-
-        .projects ul {
-
-            list-style-type: none;
-
-        }
-
-        .projects ul li {
-
-            font-size: 1.2em;
-
-            margin-bottom: 15px;
-
-            padding: 10px;
-
-            background: #2a4f71;
-
-            border-radius: 8px;
-
-            transition: background 0.3s;
-
-        }
-
-        .projects ul li:hover {
-
-            background: #f1f1f1;
-
-            color: #1c3d5a;
-
-        }
-
-        .contact a {
-
-            color: #1c3d5a;
-
-            text-decoration: none;
-
-            font-size: 1.2em;
-
-        }
-
-        .footer {
-
-            background: #1c3d5a;
-
-            color: #fff;
-
-            text-align: center;
-
-            padding: 15px;
-
-            margin-top: 30px;
-
-        }
-
-        .footer a {
-
-            color: #fff;
-
-            text-decoration: none;
-
-        }
-
-        /* Animação para a imagem de perfil */
-
-        .profile-pic {
-
-            width: 150px;
-
-            height: 150px;
-
-            border-radius: 50%;
-
-            object-fit: cover;
-
-            margin-bottom: 20px;
-
-            border: 5px solid #f1f1f1;
-
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-            transition: transform 0.3s;
-
-        }
-
-        .profile-pic:hover {
-
-            transform: scale(1.1);
-
-        }
-
-    </style>
-
+    <!-- Definindo o conjunto de caracteres e a responsividade para a página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Título da página, que aparecerá na aba do navegador -->
+    <title>Portfólio de Sávio | Analista de Dados em Formação</title>
+
+    <!-- Link para importar as fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Resetando margens e preenchimentos padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Definindo o estilo geral do corpo da página */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #0e0f11; /* Cor de fundo escura */
+            color: #f1f1f1; /* Cor do texto clara */
+            line-height: 1.6; /* Espaçamento entre as linhas do texto */
+        }
+
+        /* Estilizando o cabeçalho (header) */
+        header {
+            background: #1c3d5a; /* Cor de fundo do cabeçalho */
+            text-align: center; /* Centraliza o conteúdo */
+            padding: 60px 0; /* Espaçamento dentro do cabeçalho */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+        }
+
+        header h1 {
+            font-size: 3em; /* Tamanho grande para o título */
+            font-weight: 600; /* Peso da fonte */
+            margin-bottom: 10px; /* Espaço abaixo do título */
+        }
+
+        header p {
+            font-size: 1.2em; /* Tamanho do texto de descrição */
+            color: #ccc; /* Cor do texto de descrição */
+        }
+
+        /* Estilizando o container que envolve o conteúdo */
+        .container {
+            width: 80%; /* Largura do container */
+            margin: 0 auto; /* Centraliza o conteúdo */
+            padding: 20px 0; /* Espaçamento em cima e embaixo */
+        }
+
+        /* Estilizando as seções principais */
+        section {
+            background: #1c3d5a; /* Cor de fundo das seções */
+            margin-bottom: 30px; /* Espaço entre as seções */
+            padding: 40px; /* Espaçamento dentro das seções */
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        h2 {
+            font-size: 2.5em; /* Tamanho grande para os subtítulos */
+            margin-bottom: 15px; /* Espaço abaixo do subtítulo */
+            color: #f1f1f1; /* Cor do subtítulo */
+        }
+
+        p {
+            font-size: 1.1em; /* Tamanho do parágrafo */
+            line-height: 1.6; /* Espaçamento entre linhas */
+            color: #bbb; /* Cor do texto */
+        }
+
+        /* Estilizando a lista de habilidades */
+        .skills ul {
+            list-style-type: none; /* Removendo os marcadores da lista */
+            display: flex; /* Flexbox para alinhar itens em linha */
+            flex-wrap: wrap; /* Permite quebra de linha */
+            gap: 15px; /* Espaço entre os itens */
+        }
+
+        .skills ul li {
+            background: #2a4f71; /* Cor de fundo dos itens da lista */
+            padding: 10px 20px; /* Espaçamento dentro dos itens */
+            border-radius: 20px; /* Bordas arredondadas */
+            transition: background 0.3s; /* Transição suave na mudança de cor */
+        }
+
+        /* Efeito de hover nos itens da lista de habilidades */
+        .skills ul li:hover {
+            background: #f1f1f1; /* Cor de fundo ao passar o mouse */
+            color: #1c3d5a; /* Cor do texto ao passar o mouse */
+        }
+
+        /* Estilizando os projetos (lista de projetos) */
+        .projects ul {
+            list-style-type: none; /* Removendo os marcadores da lista */
+        }
+
+        .projects ul li {
+            font-size: 1.2em; /* Tamanho da fonte dos projetos */
+            margin-bottom: 15px; /* Espaço abaixo dos itens */
+            padding: 10px; /* Espaçamento dentro dos itens */
+            background: #2a4f71; /* Cor de fundo dos projetos */
+            border-radius: 8px; /* Bordas arredondadas */
+            transition: background 0.3s; /* Transição suave na mudança de cor */
+        }
+
+        /* Efeito de hover nos itens da lista de projetos */
+        .projects ul li:hover {
+            background: #f1f1f1; /* Cor de fundo ao passar o mouse */
+            color: #1c3d5a; /* Cor do texto ao passar o mouse */
+        }
+
+        /* Estilizando os links de contato */
+        .contact a {
+            color: #1c3d5a; /* Cor do link */
+            text-decoration: none; /* Removendo o sublinhado */
+            font-size: 1.2em; /* Tamanho do texto do link */
+        }
+
+        /* Estilizando o rodapé */
+        .footer {
+            background: #1c3d5a; /* Cor de fundo do rodapé */
+            color: #fff; /* Cor do texto */
+            text-align: center; /* Centralizando o texto */
+            padding: 15px; /* Espaçamento dentro do rodapé */
+            margin-top: 30px; /* Espaço acima do rodapé */
+        }
+
+        .footer a {
+            color: #fff; /* Cor do link no rodapé */
+            text-decoration: none; /* Removendo o sublinhado */
+        }
+
+        /* Animação para a imagem de perfil */
+        .profile-pic {
+            width: 150px; /* Tamanho da imagem */
+            height: 150px; /* Tamanho da imagem */
+            border-radius: 50%; /* Tornando a imagem circular */
+            object-fit: cover; /* Garantindo que a imagem cubra totalmente o espaço */
+            margin-bottom: 20px; /* Espaço abaixo da imagem */
+            border: 5px solid #f1f1f1; /* Borda ao redor da imagem */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor da imagem */
+            transition: transform 0.3s; /* Transição suave no efeito de zoom */
+        }
+
+        /* Efeito de hover na imagem de perfil */
+        .profile-pic:hover {
+            transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
+        }
+
+    </style>
 </head>
 
 <body>
 
+    <!-- Cabeçalho principal -->
+    <header>
+        <h1>Sávio | Analista de Dados</h1> <!-- Título -->
+        <p>Portfólio de Projetos e Habilidades</p> <!-- Descrição -->
+    </header>
 
+    <div class="container">
 
-    <header>
+        <!-- Seção "Sobre Mim" -->
+        <section>
+            <h2>Sobre Mim</h2>
+            <div style="text-align: center;">
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQH3viKJUUEiDw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710356544093?e=1747267200&v=beta&t=IjvpiI21RMuU6m_ZBtNHT-ajnAH3ktbNV6CMvkzUpiA" alt="Foto de Sávio" class="profile-pic"> <!-- Foto de perfil -->
+            </div>
+            <p>Estudante de Gestão Empresarial com experiência em rotinas administrativas, financeiras e atendimento ao cliente em ambientes corporativos e comerciais. Hábil em transformar dados em visualizações estratégicas para apoiar a tomada de decisões, com fortes habilidades de comunicação interpessoal, analíticas, negociação e apresentação em equipe.</p>
+        </section>
 
-        <h1>Sávio | Analista de Dados</h1>
+        <!-- Seção "Habilidades" -->
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li><strong>SQL (Structured Query Language):</strong> Manipulação e análise de dados em bancos de dados relacionais.</li>
+                <li><strong>Power BI:</strong> Criação de dashboards e relatórios interativos.</li>
+                <li><strong>Python:</strong> Programação para automação e análise de dados.</li>
+                <li><strong>Google Cloud:</strong> Ferramentas para análise de grandes volumes de dados.</li>
+                <li><strong>Microsoft Azure:</strong> Capacitação em IA e Machine Learning.</li>
+                <li><strong>Looker:</strong> Criação de dashboards e relatórios interativos.</li>
+                <li><strong>Excel:</strong> Análise de dados com tabelas dinâmicas e funções avançadas.</li>
+            </ul>
+        </section>
 
-        <p>Portfólio de Projetos e Habilidades</p>
+        <!-- Seção "Projetos" -->
+        <section class="projects">
+            <h2>Projetos</h2>
+            <ul>
+                <li><strong>Dashboard Power BI</strong> – Análise Financeira</li>
+                <li><strong>Projeto SQL</strong> – Banco de Dados de Clientes</li>
+                <li><strong>Automação de Relatórios</strong> – Python e Excel</li>
+            </ul>
+        </section>
 
-    </header>
+        <!-- Seção "Contato" -->
+        <section class="contact">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo através das minhas redes sociais:</p>
+            <a href="https://www.linkedin.com/in/s%C3%A1vio-henrique-17651915b/" target="_blank">LinkedIn</a> <!-- Link para LinkedIn -->
+        </section>
 
+    </div>
 
+    <!-- Rodapé -->
+    <footer class="footer">
+        <p>&copy; 2025 Sávio Henrique - Todos os direitos reservados.</p>
+    </footer>
 
-    <div class="container">
+</body>
 
+</html>
 
-
-        <!-- Sobre Mim -->
-
-        <section>
-
-            <h2>Sobre Mim</h2>
-
-            <div style="text-align: center;">
-
-                <img src="https://media.licdn.com/dms/image/v2/D4E03AQH3viKJUUEiDw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710356544093?e=1747267200&v=beta&t=IjvpiI21RMuU6m_ZBtNHT-ajnAH3ktbNV6CMvkzUpiA" alt="Foto de Sávio" class="profile-pic">
-
-            </div>
-
-            <p>Estudante de Gestão Empresarial com experiência em rotinas administrativas, financeiras e atendimento ao cliente em ambientes corporativos e comerciais. Hábil em transformar dados em visualizações estratégicas para apoiar a tomada de decisões, com fortes habilidades de comunicação interpessoal, analíticas, negociação e apresentação em equipe.</p>
-
-        </section>
-
-
-
-        <!-- Habilidades -->
-
-        <section class="skills">
-
-    <h2>Habilidades</h2>
-
-    <ul>
-
-        <li><strong>SQL (Structured Query Language):</strong> Manipulação e análise de dados em bancos de dados relacionais, utilizando SQL para consultas, inserções, atualizações e exclusões de dados.</li>
-
-        <li><strong>Power BI:</strong> Criação de dashboards e relatórios interativos para análise de dados, além de técnicas de modelagem e transformação de dados.</li>
-
-        <li><strong>Python:</strong> Introdução à programação com Python, com foco em automação, análise de dados e integração com ferramentas de visualização e bancos de dados.</li>
-
-        <li><strong>Google Cloud:</strong> Computação em nuvem, armazenamento de dados e análise de grandes volumes de dados utilizando as ferramentas do Google Cloud.</li>
-
-        <li><strong>Microsoft Azure:</strong> Capacitação em IA e Machine Learning com foco na configuração do Azure Machine Learning, otimização de modelos e implementação de soluções analíticas baseadas em IA.</li>
-
-        <li><strong>Looker:</strong> Conhecimento em criação de dashboards e relatórios, além de modelagem de dados, com foco em visualizações interativas e integração com diversas fontes de dados.</li>
-
-        <li><strong>Excel:</strong> Domínio em análise e visualização de dados, com foco em tabelas dinâmicas, funções avançadas e criação de dashboards. Experiência na utilização do Excel para análise exploratória de dados e modelagem de dados, complementando outras ferramentas de análise.</li>
-
-    </ul>
-
-</section>
-
-
-
-        <!-- Projetos -->
-
-        <section class="projects">
-
-            <h2>Projetos</h2>
-
-            <ul>
-
-                <li><strong>Dashboard Power BI</strong> – Análise Financeira</li>
-
-                <li><strong>Projeto SQL</strong> – Banco de Dados de Clientes</li>
-
-                <li><strong>Automação de Relatórios</strong> – Python e Excel</li>
-
-            </ul>
-
-        </section>
-
-
-
-        <!-- Contato -->
-
-        <section class="contact">
-
-            <h2>Contato</h2>
-
-            <p>Entre em contato comigo através dos links abaixo:</p>
-
-            <p><a href="https://github.com/saviuhs" target="_blank">GitHub</a></p>
-
-            <p><a href="https://www.linkedin.com/in/saviuhs/" target="_bla
