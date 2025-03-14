@@ -1,180 +1,164 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfólio de Sávio | Analista de Dados em Formação</title>
-    <link href="https://media.licdn.com/dms/image/v2/D4E03AQH3viKJUUEiDw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710356544093?e=1747267200&v=beta&t=IjvpiI21RMuU6m_ZBtNHT-ajnAH3ktbNV6CMvkzUpiA" rel="stylesheet">
+    <title>Sávio Souza - Portfólio Tecnológico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap');
+        
+        html, body {
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
+
         body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
             font-family: 'Roboto', sans-serif;
-            background: #0e0f11;
-            color: #f1f1f1;
+            color: #00ff41;
+            perspective: 1px;
         }
-        header {
-            background: #1c3d5a;
-            text-align: center;
-            padding: 60px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
         }
-        header h1 {
-            font-size: 3em;
-            font-weight: 600;
-            margin-bottom: 10px;
+        .tech-card {
+            background: rgba(45, 55, 72, 0.8);
+            border: 1px solid rgba(45, 212, 191, 0.5);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        header p {
-            font-size: 1.2em;
-            color: #ccc;
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.3);
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px 0;
+        /* 3D Parallax Background */
+        #background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
-        section {
-            background: #1c3d5a;
-            margin-bottom: 30px;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-            color: #f1f1f1;
-        }
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #bbb;
-        }
-        .skills ul {
-            list-style-type: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .skills ul li {
-            background: #2a4f71;
-            padding: 10px 20px;
-            border-radius: 20px;
-            transition: background 0.3s;
-        }
-        .skills ul li:hover {
-            background: #f1f1f1;
-            color: #1c3d5a;
-        }
-        .projects ul {
-            list-style-type: none;
-        }
-        .projects ul li {
-            font-size: 1.2em;
-            margin-bottom: 15px;
-            padding: 10px;
-            background: #2a4f71;
-            border-radius: 8px;
-            transition: background 0.3s;
-        }
-        .projects ul li:hover {
-            background: #f1f1f1;
-            color: #1c3d5a;
-        }
-        .contact a {
-            color: #1c3d5a;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-        .footer {
-            background: #1c3d5a;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
-        .footer a {
-            color: #fff;
-            text-decoration: none;
-        }
-        /* Animação para a imagem de perfil */
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 5px solid #f1f1f1;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
-        .profile-pic:hover {
-            transform: scale(1.1);
-        }
-    </style>
-</head>
-<body>
+        .floating-icons {
+    position: absolute; /* Faz o container ocupar toda a tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    overflow: hidden; /* Esconde os ícones que saem da tela */
+    pointer-events: none; /* Impede interação com os ícones */
+}
 
-    <header>
-        <h1>Sávio | Analista de Dados em Formação</h1>
-        <p>Portfólio de Projetos e Habilidades</p>
-    </header>
+.icon {
+    position: absolute;
+    font-size: 2rem; /* Tamanho do ícone */
+    color: rgba(255, 255, 255, 0.404); /* Cor do ícone (pode ajustar para o desejado) */
+    animation: float 10s infinite linear;
+    opacity: 0.8; /* Ajuste de opacidade, pode ser 0 para ficar totalmente invisível */
+}
 
-    <div class="container">
+        /* Enhanced Floating Icons */
+        .floating-icons {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
 
-        <!-- Sobre Mim -->
-        <section>
-            <h2>Sobre Mim</h2>
-            <div style="text-align: center;">
-                <img src="https://media.licdn.com/dms/image/v2/D4E03AQH3viKJUUEiDw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1710356544093?e=1747267200&v=beta&t=knDWM4KiuPkSjpMS4pkci2KAJPiXF-OSv-DgY3EtIBE" alt="Foto de Sávio" class="profile-pic">
-            </div>
-            <p>Sou estudante de Gestão Empresarial com foco em Análise de Dados. Apaixonado por Power BI, SQL e modelagem de dados. Busco aplicar meu conhecimento técnico para ajudar empresas a tomar decisões mais assertivas através de dados.</p>
-        </section>
+        .icon {
+            position: absolute;
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.2);
+            animation: float 20s infinite linear;
+            opacity: 0.5;
+            transition: all 0.5s ease;
+        }
 
-        <!-- Habilidades -->
-        <section class="skills">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Power BI</li>
-                <li>DAX</li>
-                <li>SQL</li>
-                <li>Python</li>
-                <li>Excel</li>
-                <li>Git</li>
-            </ul>
-        </section>
+        .icon:hover {
+            transform: scale(1.5);
+            color: rgba(0, 255, 255, 0.5);
+        }
 
-        <!-- Projetos -->
-        <section class="projects">
-            <h2>Projetos</h2>
-            <ul>
-                <li><strong>Dashboard Power BI</strong> – Análise Financeira</li>
-                <li><strong>Projeto SQL</strong> – Banco de Dados de Clientes</li>
-                <li><strong>Automação de Relatórios</strong> – Python e Excel</li>
-            </ul>
-        </section>
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(50px, 50px) rotate(90deg); }
+            50% { transform: translate(-50px, 50px) rotate(180deg); }
+            75% { transform: translate(-50px, -50px) rotate(270deg); }
+        }
 
-        <!-- Contato -->
-        <section class="contact">
-            <h2>Contato</h2>
-            <p>Entre em contato comigo através dos links abaixo:</p>
-            <p><a href="https://github.com/saviuhs" target="_blank">GitHub</a></p>
-            <p><a href="https://www.linkedin.com/in/saviuhs/" target="_blank">LinkedIn</a></p>
-            <p><a href="mailto:saviuhs@gmail.com">E-mail</a></p>
-        </section>
+        /* Glitch Effect for Headings */
+        .glitch {
+            position: relative;
+            color: #00ff41;
+            animation: glitch-skew 1s infinite linear alternate-reverse;
+        }
 
-    </div>
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-    <footer class="footer">
-        <p>&copy; 2025 Sávio. Todos os direitos reservados.</p>
-    </footer>
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 red;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
 
-</body>
-</html>
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 blue;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
 
+        @keyframes glitch-anim {
+            0% { clip: rect(61px, 9999px, 52px, 0); }
+            5% { clip: rect(33px, 9999px, 33px, 0); }
+            10% { clip: rect(50px, 9999px, 34px, 0); }
+            15% { clip: rect(37px, 9999px, 44px, 0); }
+            20% { clip: rect(40px, 9999px, 20px, 0); }
+            25% { clip: rect(50px, 9999px, 70px, 0); }
+            /* ... more random clips ... */
+        }
 
-</html>
+        @keyframes glitch-anim2 {
+            0% { clip: rect(29px, 9999px, 61px, 0); }
+            5% { clip: rect(42px, 9999px, 67px, 0); }
+            10% { clip: rect(57px, 9999px, 40px, 0); }
+            15% { clip: rect(66px, 9999px, 54px, 0); }
+            20% { clip: rect(70px, 9999px, 30px, 0); }
+            25% { clip: rect(35px, 9999px, 50px, 0); }
+            /* ... more random clips ... */
+        }
+
+        @keyframes glitch-skew {
+            0% { skew-x: -3deg; skew-y: -3deg; }
+            10% { skew-x: -3deg; skew-y: 3deg; }
+            20% { skew-x: 3deg; skew-y: -3deg; }
+            30% { skew-x: 3deg; skew-y: 3deg; }
+            40% { skew-x: -3deg; skew-y: -3deg; }
+        }
+    /* Adicionando a animação de loading */
+.skill-progress.loading {
+    background-image: linear-gradient(90deg, rgba(240, 240, 240, 0.2) 25
