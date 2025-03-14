@@ -2,196 +2,178 @@
 <html lang="pt-br">
 
 <head>
-    <!-- Definindo o conjunto de caracteres e a responsividade para a página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- Título da página, que aparecerá na aba do navegador -->
     <title>Portfólio de Sávio | Analista de Dados em Formação</title>
-
-    <!-- Link para importar as fontes do Google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
-
     <style>
-        /* Resetando margens e preenchimentos padrão */
+        /* Resetando estilos básicos */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Definindo o estilo geral do corpo da página */
         body {
             font-family: 'Roboto', sans-serif;
-            background: #0e0f11; /* Cor de fundo escura */
-            color: #f1f1f1; /* Cor do texto clara */
-            line-height: 1.6; /* Espaçamento entre as linhas do texto */
+            background: #1c1f29;
+            color: #f0f0f0;
+            line-height: 1.6;
         }
 
-        /* Estilizando o cabeçalho (header) */
         header {
-            background: #1c3d5a; /* Cor de fundo do cabeçalho */
-            text-align: center; /* Centraliza o conteúdo */
-            padding: 60px 0; /* Espaçamento dentro do cabeçalho */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+            background: #004d99;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            font-size: 3em; /* Tamanho grande para o título */
-            font-weight: 600; /* Peso da fonte */
-            margin-bottom: 10px; /* Espaço abaixo do título */
+            font-size: 3.2rem;
+            font-weight: 600;
         }
 
         header p {
-            font-size: 1.2em; /* Tamanho do texto de descrição */
-            color: #ccc; /* Cor do texto de descrição */
+            font-size: 1.3rem;
+            color: #e6e6e6;
         }
 
-        /* Estilizando o container que envolve o conteúdo */
         .container {
-            width: 80%; /* Largura do container */
-            margin: 0 auto; /* Centraliza o conteúdo */
-            padding: 20px 0; /* Espaçamento em cima e embaixo */
+            width: 80%;
+            margin: 50px auto;
         }
 
-        /* Estilizando as seções principais */
+        /* Seções */
         section {
-            background: #1c3d5a; /* Cor de fundo das seções */
-            margin-bottom: 30px; /* Espaço entre as seções */
-            padding: 40px; /* Espaçamento dentro das seções */
-            border-radius: 8px; /* Bordas arredondadas */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            background: #2c3e50;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         h2 {
-            font-size: 2.5em; /* Tamanho grande para os subtítulos */
-            margin-bottom: 15px; /* Espaço abaixo do subtítulo */
-            color: #f1f1f1; /* Cor do subtítulo */
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 15px;
         }
 
-        p {
-            font-size: 1.1em; /* Tamanho do parágrafo */
-            line-height: 1.6; /* Espaçamento entre linhas */
-            color: #bbb; /* Cor do texto */
+        p,
+        li {
+            font-size: 1.2rem;
+            color: #dcdcdc;
         }
 
-        /* Estilizando a lista de habilidades */
+        /* Lista de Habilidades */
         .skills ul {
-            list-style-type: none; /* Removendo os marcadores da lista */
-            display: flex; /* Flexbox para alinhar itens em linha */
-            flex-wrap: wrap; /* Permite quebra de linha */
-            gap: 15px; /* Espaço entre os itens */
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 10px 0;
         }
 
         .skills ul li {
-            background: #2a4f71; /* Cor de fundo dos itens da lista */
-            padding: 10px 20px; /* Espaçamento dentro dos itens */
-            border-radius: 20px; /* Bordas arredondadas */
-            transition: background 0.3s; /* Transição suave na mudança de cor */
+            background: #1f2833;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            color: #bbb;
+            transition: background 0.3s ease;
         }
 
-        /* Efeito de hover nos itens da lista de habilidades */
         .skills ul li:hover {
-            background: #f1f1f1; /* Cor de fundo ao passar o mouse */
-            color: #1c3d5a; /* Cor do texto ao passar o mouse */
+            background: #004d99;
+            color: white;
         }
 
-        /* Estilizando os projetos (lista de projetos) */
+        /* Projetos */
         .projects ul {
-            list-style-type: none; /* Removendo os marcadores da lista */
+            list-style-type: none;
+            padding: 0;
         }
 
         .projects ul li {
-            font-size: 1.2em; /* Tamanho da fonte dos projetos */
-            margin-bottom: 15px; /* Espaço abaixo dos itens */
-            padding: 10px; /* Espaçamento dentro dos itens */
-            background: #2a4f71; /* Cor de fundo dos projetos */
-            border-radius: 8px; /* Bordas arredondadas */
-            transition: background 0.3s; /* Transição suave na mudança de cor */
+            padding: 12px;
+            background: #1f2833;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: background 0.3s ease;
         }
 
-        /* Efeito de hover nos itens da lista de projetos */
         .projects ul li:hover {
-            background: #f1f1f1; /* Cor de fundo ao passar o mouse */
-            color: #1c3d5a; /* Cor do texto ao passar o mouse */
+            background: #004d99;
+            color: white;
         }
 
-        /* Estilizando os links de contato */
         .contact a {
-            color: #1c3d5a; /* Cor do link */
-            text-decoration: none; /* Removendo o sublinhado */
-            font-size: 1.2em; /* Tamanho do texto do link */
+            color: #004d99;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: color 0.3s ease;
         }
 
-        /* Estilizando o rodapé */
-        .footer {
-            background: #1c3d5a; /* Cor de fundo do rodapé */
-            color: #fff; /* Cor do texto */
-            text-align: center; /* Centralizando o texto */
-            padding: 15px; /* Espaçamento dentro do rodapé */
-            margin-top: 30px; /* Espaço acima do rodapé */
+        .contact a:hover {
+            color: #e6e6e6;
         }
 
-        .footer a {
-            color: #fff; /* Cor do link no rodapé */
-            text-decoration: none; /* Removendo o sublinhado */
+        footer {
+            background: #004d99;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.1rem;
         }
 
-        /* Animação para a imagem de perfil */
+        /* Efeito de Hover para Imagem de Perfil */
         .profile-pic {
-            width: 150px; /* Tamanho da imagem */
-            height: 150px; /* Tamanho da imagem */
-            border-radius: 50%; /* Tornando a imagem circular */
-            object-fit: cover; /* Garantindo que a imagem cubra totalmente o espaço */
-            margin-bottom: 20px; /* Espaço abaixo da imagem */
-            border: 5px solid #f1f1f1; /* Borda ao redor da imagem */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor da imagem */
-            transition: transform 0.3s; /* Transição suave no efeito de zoom */
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #f1f1f1;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
         }
 
-        /* Efeito de hover na imagem de perfil */
         .profile-pic:hover {
-            transform: scale(1.1); /* Aumenta o tamanho da imagem ao passar o mouse */
+            transform: scale(1.1);
         }
-
     </style>
 </head>
 
 <body>
-
-    <!-- Cabeçalho principal -->
+    <!-- Header -->
     <header>
-        <h1>Sávio | Analista de Dados</h1> <!-- Título -->
-        <p>Portfólio de Projetos e Habilidades</p> <!-- Descrição -->
+        <h1>Sávio | Analista de Dados em Formação</h1>
+        <p>Portfólio de Projetos e Habilidades</p>
     </header>
 
     <div class="container">
-
-        <!-- Seção "Sobre Mim" -->
+        <!-- Sobre Mim -->
         <section>
             <h2>Sobre Mim</h2>
             <div style="text-align: center;">
-                <img src="https://media.licdn.com/dms/image/v2/D4E03AQH3viKJUUEiDw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710356544093?e=1747267200&v=beta&t=IjvpiI21RMuU6m_ZBtNHT-ajnAH3ktbNV6CMvkzUpiA" alt="Foto de Sávio" class="profile-pic"> <!-- Foto de perfil -->
+                <img src="sua_foto.jpg" alt="Foto de Sávio" class="profile-pic">
             </div>
-            <p>Estudante de Gestão Empresarial com experiência em rotinas administrativas, financeiras e atendimento ao cliente em ambientes corporativos e comerciais. Hábil em transformar dados em visualizações estratégicas para apoiar a tomada de decisões, com fortes habilidades de comunicação interpessoal, analíticas, negociação e apresentação em equipe.</p>
+            <p>Sou estudante de Gestão Empresarial com foco em Análise de Dados. Apaixonado por Power BI, SQL e modelagem de dados. Busco aplicar meu conhecimento técnico para ajudar empresas a tomar decisões mais assertivas através de dados. Estou em constante aprendizado e adoro enfrentar novos desafios.</p>
         </section>
 
-        <!-- Seção "Habilidades" -->
+        <!-- Habilidades -->
         <section class="skills">
             <h2>Habilidades</h2>
             <ul>
-                <li><strong>SQL (Structured Query Language):</strong> Manipulação e análise de dados em bancos de dados relacionais.</li>
-                <li><strong>Power BI:</strong> Criação de dashboards e relatórios interativos.</li>
-                <li><strong>Python:</strong> Programação para automação e análise de dados.</li>
-                <li><strong>Google Cloud:</strong> Ferramentas para análise de grandes volumes de dados.</li>
-                <li><strong>Microsoft Azure:</strong> Capacitação em IA e Machine Learning.</li>
-                <li><strong>Looker:</strong> Criação de dashboards e relatórios interativos.</li>
-                <li><strong>Excel:</strong> Análise de dados com tabelas dinâmicas e funções avançadas.</li>
+                <li>Power BI</li>
+                <li>DAX</li>
+                <li>SQL</li>
+                <li>Python</li>
+                <li>Excel</li>
+                <li>Git</li>
             </ul>
         </section>
 
-        <!-- Seção "Projetos" -->
+        <!-- Projetos -->
         <section class="projects">
             <h2>Projetos</h2>
             <ul>
@@ -201,20 +183,19 @@
             </ul>
         </section>
 
-        <!-- Seção "Contato" -->
+        <!-- Contato -->
         <section class="contact">
             <h2>Contato</h2>
-            <p>Entre em contato comigo através das minhas redes sociais:</p>
-            <a href="https://www.linkedin.com/in/s%C3%A1vio-henrique-17651915b/" target="_blank">LinkedIn</a> <!-- Link para LinkedIn -->
+            <p>Entre em contato comigo através dos links abaixo:</p>
+            <p><a href="https://github.com/saviuhs" target="_blank">GitHub</a></p>
+            <p><a href="https://www.linkedin.com/in/saviuhs/" target="_blank">LinkedIn</a></p>
+            <p><a href="mailto:saviuhs@gmail.com">E-mail</a></p>
         </section>
-
     </div>
 
-    <!-- Rodapé -->
-    <footer class="footer">
-        <p>&copy; 2025 Sávio Henrique - Todos os direitos reservados.</p>
+    <footer>
+        <p>&copy; 2025 Sávio. Todos os direitos reservados.</p>
     </footer>
-
 </body>
 
 </html>
