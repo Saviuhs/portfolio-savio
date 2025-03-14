@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,156 +7,132 @@
     <title>Portfólio de Sávio | Analista de Dados em Formação</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Resetando estilos básicos */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Roboto', sans-serif;
-            background: #1c1f29;
-            color: #f0f0f0;
-            line-height: 1.6;
+            background: #0e0f11;
+            color: #f1f1f1;
         }
-
         header {
-            background: #004d99;
-            color: white;
-            padding: 80px 20px;
+            background: #1c3d5a;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 60px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-
         header h1 {
-            font-size: 3.2rem;
+            font-size: 3em;
             font-weight: 600;
+            margin-bottom: 10px;
         }
-
         header p {
-            font-size: 1.3rem;
-            color: #e6e6e6;
+            font-size: 1.2em;
+            color: #ccc;
         }
-
         .container {
             width: 80%;
-            margin: 50px auto;
+            margin: 0 auto;
+            padding: 20px 0;
         }
-
-        /* Seções */
         section {
-            background: #2c3e50;
-            padding: 40px;
-            border-radius: 12px;
+            background: #1c3d5a;
             margin-bottom: 30px;
+            padding: 40px;
+            border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
-
         h2 {
-            font-size: 2.5rem;
-            color: #fff;
+            font-size: 2.5em;
             margin-bottom: 15px;
+            color: #f1f1f1;
         }
-
-        p,
-        li {
-            font-size: 1.2rem;
-            color: #dcdcdc;
-        }
-
-        /* Lista de Habilidades */
-        .skills ul {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            padding: 10px 0;
-        }
-
-        .skills ul li {
-            background: #1f2833;
-            padding: 12px 20px;
-            border-radius: 30px;
-            font-size: 1.1rem;
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
             color: #bbb;
-            transition: background 0.3s ease;
         }
-
+        .skills ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .skills ul li {
+            background: #2a4f71;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
         .skills ul li:hover {
-            background: #004d99;
-            color: white;
+            background: #f1f1f1;
+            color: #1c3d5a;
         }
-
-        /* Projetos */
         .projects ul {
             list-style-type: none;
-            padding: 0;
         }
-
         .projects ul li {
-            padding: 12px;
-            background: #1f2833;
-            border-radius: 8px;
+            font-size: 1.2em;
             margin-bottom: 15px;
-            transition: background 0.3s ease;
+            padding: 10px;
+            background: #2a4f71;
+            border-radius: 8px;
+            transition: background 0.3s;
         }
-
         .projects ul li:hover {
-            background: #004d99;
-            color: white;
+            background: #f1f1f1;
+            color: #1c3d5a;
         }
-
         .contact a {
-            color: #004d99;
+            color: #1c3d5a;
             text-decoration: none;
-            font-size: 1.4rem;
-            transition: color 0.3s ease;
+            font-size: 1.2em;
         }
-
-        .contact a:hover {
-            color: #e6e6e6;
-        }
-
-        footer {
-            background: #004d99;
-            color: white;
-            padding: 15px;
+        .footer {
+            background: #1c3d5a;
+            color: #fff;
             text-align: center;
-            font-size: 1.1rem;
+            padding: 15px;
+            margin-top: 30px;
         }
-
-        /* Efeito de Hover para Imagem de Perfil */
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* Animação para a imagem de perfil */
         .profile-pic {
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid #f1f1f1;
             margin-bottom: 20px;
-            transition: transform 0.3s ease-in-out;
+            border: 5px solid #f1f1f1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
         }
-
         .profile-pic:hover {
             transform: scale(1.1);
         }
     </style>
 </head>
-
 <body>
-    <!-- Header -->
+
     <header>
         <h1>Sávio | Analista de Dados em Formação</h1>
         <p>Portfólio de Projetos e Habilidades</p>
     </header>
 
     <div class="container">
+
         <!-- Sobre Mim -->
         <section>
             <h2>Sobre Mim</h2>
             <div style="text-align: center;">
                 <img src="sua_foto.jpg" alt="Foto de Sávio" class="profile-pic">
             </div>
-            <p>Sou estudante de Gestão Empresarial com foco em Análise de Dados. Apaixonado por Power BI, SQL e modelagem de dados. Busco aplicar meu conhecimento técnico para ajudar empresas a tomar decisões mais assertivas através de dados. Estou em constante aprendizado e adoro enfrentar novos desafios.</p>
+            <p>Sou estudante de Gestão Empresarial com foco em Análise de Dados. Apaixonado por Power BI, SQL e modelagem de dados. Busco aplicar meu conhecimento técnico para ajudar empresas a tomar decisões mais assertivas através de dados.</p>
         </section>
 
         <!-- Habilidades -->
@@ -191,11 +166,15 @@
             <p><a href="https://www.linkedin.com/in/saviuhs/" target="_blank">LinkedIn</a></p>
             <p><a href="mailto:saviuhs@gmail.com">E-mail</a></p>
         </section>
+
     </div>
 
-    <footer>
+    <footer class="footer">
         <p>&copy; 2025 Sávio. Todos os direitos reservados.</p>
     </footer>
+
 </body>
+</html>
+
 
 </html>
