@@ -1,159 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sávio Souza - Portfólio Tecnológico</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfólio de Sávio | Analista de Dados em Formação</title>
+
+    <!-- Link para o CDN do Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400;700&display=swap');
+</head>
+<body class="bg-gray-100 text-gray-800">
 
-        html, body {
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
+    <header class="bg-blue-600 text-white p-4">
+        <h1 class="text-3xl font-semibold text-center">Portfólio de Sávio | Analista de Dados em Formação</h1>
+    </header>
 
-        body {
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
-            font-family: 'Roboto', sans-serif;
-            color: #00ff41;
-            perspective: 1px;
-        }
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            padding: 2rem;
-        }
-        .tech-card {
-            background: rgba(45, 55, 72, 0.8);
-            border: 1px solid rgba(45, 212, 191, 0.5);
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .tech-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.3);
-        }
-        /* 3D Parallax Background */
-        #background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        .floating-icons {
-    position: absolute; /* Faz o container ocupar toda a tela */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Ocupa toda a altura da tela */
-    overflow: hidden; /* Esconde os ícones que saem da tela */
-    pointer-events: none; /* Impede interação com os ícones */
-}
+    <div class="container mx-auto p-6">
 
-.icon {
-    position: absolute;
-    font-size: 2rem; /* Tamanho do ícone */
-    color: rgba(255, 255, 255, 0.404); /* Cor do ícone (pode ajustar para o desejado) */
-    animation: float 10s infinite linear;
-    opacity: 0.8; /* Ajuste de opacidade, pode ser 0 para ficar totalmente invisível */
-}
+        <!-- Sobre Mim -->
+        <section class="bg-white p-6 mb-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold text-blue-600">Sobre Mim</h2>
+            <p>Sou estudante de Gestão Empresarial com foco em Análise de Dados. Apaixonado por Power BI, SQL e modelagem de dados. Busco oportunidades para aplicar meu conhecimento técnico em projetos reais.</p>
+        </section>
 
-        /* Enhanced Floating Icons */
-        .floating-icons {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
-        }
+        <!-- Habilidades -->
+        <section class="bg-white p-6 mb-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold text-blue-600">Habilidades</h2>
+            <ul class="list-none p-0">
+                <li class="py-2">Power BI</li>
+                <li class="py-2">DAX</li>
+                <li class="py-2">SQL</li>
+                <li class="py-2">Excel</li>
+                <li class="py-2">Python</li>
+                <li class="py-2">Git</li>
+                <li class="py-2">Análise de Dados</li>
+            </ul>
+        </section>
 
-        .icon {
-            position: absolute;
-            font-size: 2rem;
-            color: rgba(255, 255, 255, 0.2);
-            animation: float 20s infinite linear;
-            opacity: 0.5;
-            transition: all 0.5s ease;
-        }
+        <!-- Projetos -->
+        <section class="bg-white p-6 mb-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold text-blue-600">Projetos</h2>
+            <ul class="list-none p-0">
+                <li class="py-2"><strong>Dashboard Power BI</strong> – Análise Financeira</li>
+                <li class="py-2"><strong>Projeto SQL</strong> – Consulta de Base de Clientes</li>
+            </ul>
+        </section>
 
-        .icon:hover {
-            transform: scale(1.5);
-            color: rgba(0, 255, 255, 0.5);
-        }
+        <!-- Contato -->
+        <section class="bg-white p-6 mb-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-bold text-blue-600">Contato</h2>
+            <p>GitHub: <a href="https://github.com/saviuhs" target="_blank" class="text-blue-600">https://github.com/saviuhs</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/saviuhs/" target="_blank" class="text-blue-600">https://www.linkedin.com/in/saviuhs/</a></p>
+            <p>E-mail: <a href="mailto:saviuhs@gmail.com" class="text-blue-600">saviuhs@gmail.com</a></p>
+        </section>
+    </div>
 
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            25% { transform: translate(50px, 50px) rotate(90deg); }
-            50% { transform: translate(-50px, 50px) rotate(180deg); }
-            75% { transform: translate(-50px, -50px) rotate(270deg); }
-        }
+    <footer class="bg-blue-600 text-white text-center py-3">
+        <p>&copy; 2025 Sávio. Todos os direitos reservados.</p>
+    </footer>
 
-        /* Glitch Effect for Headings */
-        .glitch {
-            position: relative;
-            color: #00ff41;
-            animation: glitch-skew 1s infinite linear alternate-reverse;
-        }
+</body>
+</html>
 
-        .glitch::before,
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .glitch::before {
-            left: 2px;
-            text-shadow: -2px 0 red;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim 5s infinite linear alternate-reverse;
-        }
-
-        .glitch::after {
-            left: -2px;
-            text-shadow: -2px 0 blue;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim2 5s infinite linear alternate-reverse;
-        }
-
-        @keyframes glitch-anim {
-            0% { clip: rect(61px, 9999px, 52px, 0); }
-            5% { clip: rect(33px, 9999px, 33px, 0); }
-            10% { clip: rect(50px, 9999px, 34px, 0); }
-            15% { clip: rect(37px, 9999px, 44px, 0); }
-            20% { clip: rect(40px, 9999px, 20px, 0); }
-            25% { clip: rect(50px, 9999px, 70px, 0); }
-            /* ... more random clips ... */
-        }
-
-        @keyframes glitch-anim2 {
-            0% { clip: rect(29px, 9999px, 61px, 0); }
-            5% { clip: rect(42px, 9999px, 67px, 0); }
-            10% { clip: rect(57px, 9999px, 40px, 0); }
-            15% { clip: rect(66px, 9999px, 54px, 0); }
-            20% { clip: rect(70px, 9999px, 30px, 0); }
-            25% { clip: rect(35px, 9999px, 50px, 0); }
-            /* ... more random clips ... */
-        }
-
-        @keyframes glitch-skew {
-            0% { skew-x: -3deg; skew-y: -3deg; }
-            10% { skew-x: -3deg; skew-y: 3deg; }
-            20% { skew-x: 3deg; skew-y: -3deg; }
-            30% { skew-x: 3deg
