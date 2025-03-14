@@ -1,87 +1,201 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <!-- Definindo o charset para garantir que caracteres especiais sejam exibidos corretamente -->
     <meta charset="UTF-8">
-    <!-- Tornando a página responsiva para dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Definindo compatibilidade com os navegadores -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfólio de Sávio | Analista de Dados em Formação</title>
-    <!-- Importando fontes do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Resetando margens e preenchimentos para todos os elementos */
+        /* Resetando estilos básicos */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Estilo geral do corpo da página */
         body {
             font-family: 'Roboto', sans-serif;
-            background: #0e0f11; /* Fundo escuro */
-            color: #f1f1f1; /* Texto claro */
+            background: #1c1f29;
+            color: #f0f0f0;
+            line-height: 1.6;
         }
 
-        /* Estilo do cabeçalho */
         header {
-            background: #1c3d5a; /* Azul escuro */
-            text-align: center; /* Centraliza o conteúdo */
-            padding: 60px 0; /* Espaçamento em cima e embaixo */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+            background: #004d99;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Estilo do título principal do cabeçalho */
         header h1 {
-            font-size: 3em;
+            font-size: 3.2rem;
             font-weight: 600;
-            margin-bottom: 10px;
         }
 
-        /* Estilo das seções principais */
+        header p {
+            font-size: 1.3rem;
+            color: #e6e6e6;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        /* Seções */
         section {
-            background: #1c3d5a; /* Fundo azul escuro */
+            background: #2c3e50;
             padding: 40px;
-            border-radius: 8px; /* Bordas arredondadas */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        /* Estilo da lista de habilidades */
+        h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        p,
+        li {
+            font-size: 1.2rem;
+            color: #dcdcdc;
+        }
+
+        /* Lista de Habilidades */
         .skills ul {
-            list-style-type: none; /* Remove os marcadores da lista */
-            display: flex; /* Usa Flexbox para alinhar os itens */
-            flex-wrap: wrap; /* Permite quebrar linha se necessário */
-            gap: 15px; /* Espaçamento entre os itens */
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 10px 0;
         }
 
-        /* Estilo dos itens da lista de habilidades */
         .skills ul li {
-            background: #2a4f71; /* Fundo azul escuro */
-            padding: 10px 20px;
-            border-radius: 20px; /* Bordas arredondadas */
-            transition: background 0.3s; /* Transição suave ao passar o mouse */
+            background: #1f2833;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            color: #bbb;
+            transition: background 0.3s ease;
         }
 
-        /* Efeito quando o mouse passa sobre os itens da lista */
         .skills ul li:hover {
-            background: #f1f1f1; /* Cor clara ao passar o mouse */
-            color: #1c3d5a; /* Texto azul escuro */
+            background: #004d99;
+            color: white;
         }
 
-        /* Estilo da imagem de perfil */
+        /* Projetos */
+        .projects ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .projects ul li {
+            padding: 12px;
+            background: #1f2833;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: background 0.3s ease;
+        }
+
+        .projects ul li:hover {
+            background: #004d99;
+            color: white;
+        }
+
+        .contact a {
+            color: #004d99;
+            text-decoration: none;
+            font-size: 1.4rem;
+            transition: color 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: #e6e6e6;
+        }
+
+        footer {
+            background: #004d99;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Efeito de Hover para Imagem de Perfil */
         .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%; /* Faz a imagem ficar circular */
-            object-fit: cover; /* Faz a imagem cobrir o espaço sem distorção */
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #f1f1f1;
             margin-bottom: 20px;
-            border: 5px solid #f1f1f1; /* Borda branca ao redor da imagem */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-            transition: transform 0.3s; /* Transição suave ao passar o mouse */
+            transition: transform 0.3s ease-in-out;
         }
 
-        /* Efeito de zoom quando o mouse passa sobre a imagem de perfil */
         .profile-pic:hover {
-            transform: scale(1.1); /* Aumenta a imagem para 110% do taman
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Sávio | Analista de Dados em Formação</h1>
+        <p>Portfólio de Projetos e Habilidades</p>
+    </header>
+
+    <div class="container">
+        <!-- Sobre Mim -->
+        <section>
+            <h2>Sobre Mim</h2>
+            <div style="text-align: center;">
+                <img src="sua_foto.jpg" alt="Foto de Sávio" class="profile-pic">
+            </div>
+            <p>Sou estudante de Gestão Empresarial com foco em Análise de Dados. Apaixonado por Power BI, SQL e modelagem de dados. Busco aplicar meu conhecimento técnico para ajudar empresas a tomar decisões mais assertivas através de dados. Estou em constante aprendizado e adoro enfrentar novos desafios.</p>
+        </section>
+
+        <!-- Habilidades -->
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Power BI</li>
+                <li>DAX</li>
+                <li>SQL</li>
+                <li>Python</li>
+                <li>Excel</li>
+                <li>Git</li>
+            </ul>
+        </section>
+
+        <!-- Projetos -->
+        <section class="projects">
+            <h2>Projetos</h2>
+            <ul>
+                <li><strong>Dashboard Power BI</strong> – Análise Financeira</li>
+                <li><strong>Projeto SQL</strong> – Banco de Dados de Clientes</li>
+                <li><strong>Automação de Relatórios</strong> – Python e Excel</li>
+            </ul>
+        </section>
+
+        <!-- Contato -->
+        <section class="contact">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo através dos links abaixo:</p>
+            <p><a href="https://github.com/saviuhs" target="_blank">GitHub</a></p>
+            <p><a href="https://www.linkedin.com/in/saviuhs/" target="_blank">LinkedIn</a></p>
+            <p><a href="mailto:saviuhs@gmail.com">E-mail</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sávio. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
