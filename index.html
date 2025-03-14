@@ -5,139 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfólio de Sávio | Analista de Dados em Formação</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background: #e0f2fe; /* Azul claro */
+        * {
             margin: 0;
             padding: 0;
-            color: #333;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #0e0f11;
+            color: #f1f1f1;
         }
         header {
-            background: #1e88e5; /* Azul vibrante */
-            color: white;
-            padding: 40px 0;
+            background: #1c3d5a;
             text-align: center;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            padding: 60px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        h1 {
-            margin: 0;
-            font-size: 3.5em;
+        header h1 {
+            font-size: 3em;
             font-weight: 600;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #ccc;
         }
         .container {
             width: 80%;
             margin: 0 auto;
+            padding: 20px 0;
         }
-        .about, .skills, .projects, .contact {
-            background: #fff;
-            padding: 40px;
+        section {
+            background: #1c3d5a;
             margin-bottom: 30px;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-        .about:hover, .skills:hover, .projects:hover, .contact:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            color: #1e88e5; /* Azul vibrante */
             font-size: 2.5em;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            color: #f1f1f1;
         }
-        ul {
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #bbb;
+        }
+        .skills ul {
             list-style-type: none;
-            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
         }
-        li {
-            padding: 10px 0;
+        .skills ul li {
+            background: #2a4f71;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+        .skills ul li:hover {
+            background: #f1f1f1;
+            color: #1c3d5a;
+        }
+        .projects ul {
+            list-style-type: none;
+        }
+        .projects ul li {
             font-size: 1.2em;
-            color: #555;
-            transition: color 0.3s ease;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #2a4f71;
+            border-radius: 8px;
+            transition: background 0.3s;
         }
-        li:hover {
-            color: #1e88e5;
+        .projects ul li:hover {
+            background: #f1f1f1;
+            color: #1c3d5a;
+        }
+        .contact a {
+            color: #1c3d5a;
+            text-decoration: none;
+            font-size: 1.2em;
         }
         .footer {
+            background: #1c3d5a;
+            color: #fff;
             text-align: center;
-            background: #1e88e5;
-            color: white;
             padding: 15px;
-            margin-top: 40px;
+            margin-top: 30px;
         }
         .footer a {
-            color: white;
+            color: #fff;
             text-decoration: none;
-            transition: color 0.3s ease;
         }
-        .footer a:hover {
-            color: #bbdefb; /* Azul claro */
-        }
+        /* Animação para a imagem de perfil */
         .profile-pic {
-            width: 180px;
-            height: 180px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 6px solid #e0f2fe; /* Azul claro */
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+            border: 5px solid #f1f1f1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
         }
-        a {
-            color: #1e88e5;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: #00b0ff; /* Azul mais claro */
+        .profile-pic:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Portfólio de Sávio | Analista de Dados em Formação</h1>
+        <h1>Sávio | Analista de Dados em Formação</h1>
+        <p>Portfólio de Projetos e Habilidades</p>
     </header>
 
     <div class="container">
-        <section class="about">
+
+        <!-- Sobre Mim -->
+        <section>
             <h2>Sobre Mim</h2>
             <div style="text-align: center;">
-                <img class="profile-pic" src="sua_foto.jpg" alt="Foto de Sávio"> </div>
-            <p>Sou estudante de Gestão Empresarial com foco em Análise de Dados. Apaixonado por Power BI, SQL e modelagem de dados. Busco oportunidades para aplicar meu conhecimento técnico em projetos reais e contribuir para a transformação digital nas empresas.</p>
+                <img src="sua_foto.jpg" alt="Foto de Sávio" class="profile-pic">
+            </div>
+            <p>Sou estudante de Gestão Empresarial com foco em Análise de Dados. Apaixonado por Power BI, SQL e modelagem de dados. Busco aplicar meu conhecimento técnico para ajudar empresas a tomar decisões mais assertivas através de dados.</p>
         </section>
 
+        <!-- Habilidades -->
         <section class="skills">
             <h2>Habilidades</h2>
             <ul>
-                <li><strong>Power BI</strong> – Criação de Dashboards, Análises e Relatórios</li>
-                <li><strong>DAX</strong> – Fórmulas avançadas e criação de medidas</li>
-                <li><strong>SQL</strong> – Consultas, manipulação de dados e criação de bancos</li>
-                <li><strong>Excel</strong> – Análise e visualização de dados com tabelas dinâmicas</li>
-                <li><strong>Python</strong> – Automação e análise de dados</li>
-                <li><strong>Git</strong> – Controle de versões e colaboração em projetos</li>
-                <li><strong>Análise de Dados</strong> – Interpretação de dados para tomada de decisões</li>
+                <li>Power BI</li>
+                <li>DAX</li>
+                <li>SQL</li>
+                <li>Python</li>
+                <li>Excel</li>
+                <li>Git</li>
             </ul>
         </section>
 
+        <!-- Projetos -->
         <section class="projects">
             <h2>Projetos</h2>
             <ul>
-                <li><strong>Dashboard Power BI</strong> – Análise Financeira de uma empresa fictícia para visualização de fluxo de caixa.</li>
-                <li><strong>Projeto SQL</strong> – Consulta e limpeza de base de dados de clientes de um e-commerce.</li>
+                <li><strong>Dashboard Power BI</strong> – Análise Financeira</li>
+                <li><strong>Projeto SQL</strong> – Banco de Dados de Clientes</li>
+                <li><strong>Automação de Relatórios</strong> – Python e Excel</li>
             </ul>
         </section>
 
+        <!-- Contato -->
         <section class="contact">
             <h2>Contato</h2>
-            <p>GitHub: <a href="https://github.com/saviuhs" target="_blank">https://github.com/saviuhs</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/saviuhs/" target="_blank">https://www.linkedin.com/in/saviuhs/</a></p>
-            <p>E-mail: <a href="mailto:saviuhs@gmail.com">saviuhs@gmail.com</a></p>
-        </section>
-    </div>
+            <p>Entre em contato comigo através dos links abaixo:</p>
+            <p><a href="https://github.com/saviuhs" target="_blank">GitHub</a></p>
+            <p><a href="https://www.linkedin.com/in/saviuhs/" target="_bla
 
-    <footer class="footer">
-        <p>&copy; 2025 Sávio. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
