@@ -7,45 +7,59 @@
     <title>Portfólio de Sávio | Analista de Dados em Formação</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f9;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #f0f0f0;
             margin: 0;
             padding: 0;
+            color: #333;
         }
         header {
-            background: #004d99;
+            background: #1a3d73; /* Azul escuro */
             color: white;
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            font-weight: 600;
         }
         .container {
-            width: 90%;
+            width: 80%;
             margin: 0 auto;
         }
         .about, .skills, .projects, .contact {
-            background: white;
+            background: #fff;
             padding: 30px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .about:hover, .skills:hover, .projects:hover, .contact:hover {
+            transform: translateY(-5px);
         }
         h2 {
-            color: #004d99;
+            color: #1a3d73; /* Azul escuro */
+            font-size: 2em;
+            margin-bottom: 15px;
         }
         ul {
             list-style-type: none;
             padding: 0;
         }
         li {
-            padding: 5px 0;
+            padding: 8px 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+        li:hover {
+            color: #1a3d73;
         }
         .footer {
             text-align: center;
-            background: #004d99;
+            background: #1a3d73;
             color: white;
             padding: 10px;
             margin-top: 30px;
@@ -53,6 +67,27 @@
         .footer a {
             color: white;
             text-decoration: none;
+        }
+
+        /* Estilo para a foto */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Efeitos para links */
+        a {
+            color: #1a3d73;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #00b4d8; /* Cor de destaque azul */
         }
     </style>
 </head>
@@ -65,20 +100,23 @@
         <!-- Sobre Mim -->
         <section class="about">
             <h2>Sobre Mim</h2>
-            <p>Sou estudante de Gestão Empresarial com foco em Análise de Dados. Apaixonado por Power BI, SQL e modelagem de dados. Busco oportunidades para aplicar meu conhecimento técnico em projetos reais.</p>
+            <div style="text-align: center;">
+                <img class="profile-pic" src="sua_foto.jpg" alt="Foto de Sávio"> <!-- Substitua por sua foto -->
+            </div>
+            <p>Sou estudante de Gestão Empresarial com foco em Análise de Dados. Apaixonado por Power BI, SQL e modelagem de dados. Busco oportunidades para aplicar meu conhecimento técnico em projetos reais e contribuir para a transformação digital nas empresas.</p>
         </section>
 
         <!-- Habilidades -->
         <section class="skills">
             <h2>Habilidades</h2>
             <ul>
-                <li>Power BI</li>
-                <li>DAX</li>
-                <li>SQL</li>
-                <li>Excel</li>
-                <li>Python</li>
-                <li>Git</li>
-                <li>Análise de Dados</li>
+                <li><strong>Power BI</strong> – Criação de Dashboards, Análises e Relatórios</li>
+                <li><strong>DAX</strong> – Fórmulas avançadas e criação de medidas</li>
+                <li><strong>SQL</strong> – Consultas, manipulação de dados e criação de bancos</li>
+                <li><strong>Excel</strong> – Análise e visualização de dados com tabelas dinâmicas</li>
+                <li><strong>Python</strong> – Automação e análise de dados</li>
+                <li><strong>Git</strong> – Controle de versões e colaboração em projetos</li>
+                <li><strong>Análise de Dados</strong> – Interpretação de dados para tomada de decisões</li>
             </ul>
         </section>
 
@@ -86,8 +124,8 @@
         <section class="projects">
             <h2>Projetos</h2>
             <ul>
-                <li><strong>Dashboard Power BI</strong> – Análise Financeira</li>
-                <li><strong>Projeto SQL</strong> – Consulta de Base de Clientes</li>
+                <li><strong>Dashboard Power BI</strong> – Análise Financeira de uma empresa fictícia para visualização de fluxo de caixa.</li>
+                <li><strong>Projeto SQL</strong> – Consulta e limpeza de base de dados de clientes de um e-commerce.</li>
             </ul>
         </section>
 
@@ -105,4 +143,5 @@
     </footer>
 </body>
 </html>
+
 
